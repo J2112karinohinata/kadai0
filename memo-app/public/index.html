@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>View Memos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Saved Memos</h1>
+    <ul>
+      <!-- メモのリストはサーバーサイドで生成される -->
+      <li>
+        <pre>Title: Example Memo\nMemo: This is a sample memo content.</pre>
+        <p>Likes: 10</p>
+        <form action="/like" method="post" style="display:inline;">
+          <input type="hidden" name="index" value="0">
+          <button type="submit">Like</button>
+        </form>
+        <form action="/edit" method="post" style="display:inline;">
+          <input type="hidden" name="index" value="0">
+          <button type="submit">Edit</button>
+        </form>
+        <form action="/delete" method="post" style="display:inline;">
+          <input type="hidden" name="index" value="0">
+          <button type="submit">Delete</button>
+        </form>
+      </li>
+      <!-- 他のメモも同様に表示される -->
+    </ul>
+    <a href="/">Back to home</a>
+  </div>
+</body>
+</html>
